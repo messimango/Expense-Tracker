@@ -1,12 +1,24 @@
 import React, { useState } from 'react';
 import './styles.css';
+import { useDispatch } from 'react-redux';
+import { createPost } from "../../actions/posts";
 
 const Form = () => {
     const [postData, setPostData] = useState({
-        title: '', amount: '', date: '', type: '', paid: '' });
-    const handleSubmit = () => {
+        title: '', amount: '', date: '', type: '', paid: '' }
+    );
     
+    const dispatch = useDispatch();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        dispatch(createPost(postData))
     }
+
+    const clear = () => {
+
+    }  
 
     return (
         <>
@@ -41,8 +53,8 @@ const Form = () => {
                     <option value="Insurance">Insurance</option>
                     <option value="Other">Other</option>
                 </datalist>
-                <button variant="danger">Clear</button>
-                <button variant="primary">Submit</button>
+                <button variant="danger" onClick={clear} >Clear</button>
+                <button variant="primary" type='submit'>Submit</button>
             </form>
         </>
     );
