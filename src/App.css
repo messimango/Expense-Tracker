@@ -4,8 +4,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: lightgoldenrodyellow;
 }
+
 .main {
     display: flex;
     flex-direction: column;
@@ -19,4 +19,46 @@
     padding: 10px;
     margin: 20px;
     border-radius: 5px;
+}
+
+.form {
+    background-color: lightgray;
+    padding: 2rem;
+}
+.form h3{
+    background-color: lightgray;
+}
+
+.input-group{
+    background-color: lightgray;
+}
+
+.input-group label{
+    background-color: lightgray;
+    padding: .5rem;
+}
+
+.input-group button{
+    margin-right: .5rem;
+}
+.button{
+    background-color: lightgray;
+}
+/* each item */
+.each td button{
+    border: none;
+    cursor: pointer;
+
+}
+
+.fa-pen-to-square:hover {
+    color: gray;
+}
+
+.fa-trash {
+    color: red;
+}
+
+.fa-trash:hover {
+    color: rgb(112, 20, 20);
 }
